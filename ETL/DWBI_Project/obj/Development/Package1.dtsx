@@ -1,0 +1,1392 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/18/2022 4:38:04 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-9EKHVJP"
+  DTS:CreatorName="DESKTOP-9EKHVJP\User"
+  DTS:DTSID="{7DC36B50-DBD6-4DDE-8983-3A03D7A2C9BD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{AE45AAE6-36F9-4982-8A3A-DC00CED87FE0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-9EKHVJP\MSSQLSERVER_DWBI.IPL_MatchesD_DW.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{098C7332-13A8-4D59-92AB-996A45B29124}"
+      DTS:ObjectName="DESKTOP-9EKHVJP\MSSQLSERVER_DWBI.IPL_MatchesD_DW.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-9EKHVJP\MSSQLSERVER_DWBI;User ID=sa;Initial Catalog=IPL_MatchesD_DW;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAwKBbatXo20ajv5zyCEi2IQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB1volL9iMtQKDUfBJUItPCTCOD27fFJHNLsJLWYo1SjwAAAAAOgAAAAAIAACAAAABVAILKYdIG/Gs2PCfEPMIAFdxbzv0ecfRF6JHeBvgg7iAAAABDt3rsvV8kcToHjisjJ6rcEbdGz8+teFyDfn9gpyUhLEAAAABzh1D8u1RgCPKkqnJ0aOyNnKUegjxcQoA9wTXVhYPy4kH7oq7TDIbVwMNGM/2uYSfrFQtCIUA0/7Sej0eriHvK</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{34B062E9-AEF3-4560-9255-5241A2F8BBFA}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\User\Desktop\DWBI_porject\Complete time.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BallID"
+              DTS:DTSID="{89FFD50D-CF34-464A-834A-A70481E62D0F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accm_txn_complete_time"
+              DTS:DTSID="{397336DE-5958-49B5-87FC-CB43ED14C7A6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A2A05915-598C-4AF2-8D1D-02BA391252DA}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\User\Desktop\DWBI_porject\new complete time.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BallID"
+              DTS:DTSID="{E48FC1A1-6E23-438D-9CBC-98FB1054484E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accm_txn_complete_time"
+              DTS:DTSID="{350C16FA-957B-401F-A573-E88CC6A47C83}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract complete time"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2FC1F5CE-5AEA-4B0F-AD95-1357EC9C33DD}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract complete time"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract complete time\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Extract complete time\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract complete time\Derived Column.Inputs[Derived Column Input].Columns[CreatTime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatTime"
+                      lineageId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[CreatTime]" />
+                    <inputColumn
+                      refId="Package\Extract complete time\Derived Column.Inputs[Derived Column Input].Columns[ProcessTimeHours]"
+                      cachedDataType="r8"
+                      cachedName="ProcessTimeHours"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[ProcessTimeHours]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[DATEDIFF]("Hh",#{Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[CreatTime]},#{Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEDIFF("Hh",CreatTime,accm_txn_complete_time)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract complete time\Derived Column.Inputs[Derived Column Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract complete time\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Extract complete time\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract complete time\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Extract complete time\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract complete time\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract complete time\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract complete time\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract complete time\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract complete time\Extrac Compleate time data"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Extrac Compleate time data"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract complete time\Extrac Compleate time data.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output].Columns[BallID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output].ExternalColumns[BallID]"
+                      lineageId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output].Columns[BallID]"
+                      name="BallID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output].ExternalColumns[accm_txn_complete_time]"
+                      lineageId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output].ExternalColumns[BallID]"
+                      dataType="numeric"
+                      name="BallID"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output].ExternalColumns[accm_txn_complete_time]"
+                      dataType="date"
+                      name="accm_txn_complete_time" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Extract fact table from IPL_Match_Detail_DW"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactDelevery]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-9EKHVJP\MSSQLSERVER_DWBI.IPL_MatchesD_DW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-9EKHVJP\MSSQLSERVER_DWBI.IPL_MatchesD_DW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[BallID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[BallID]"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[BallID]"
+                      name="BallID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[CompleteTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[CompleteTime]"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[CompleteTime]"
+                      name="CompleteTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[ProcessTimeHours]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[ProcessTimeHours]"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[ProcessTimeHours]"
+                      name="ProcessTimeHours"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[CreatTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[CreatTime]"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[CreatTime]"
+                      name="CreatTime"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[BallID]"
+                      dataType="i4"
+                      name="BallID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[MatchKey]"
+                      dataType="i4"
+                      name="MatchKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[Inning]"
+                      dataType="i4"
+                      name="Inning" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[OverCount]"
+                      dataType="i4"
+                      name="OverCount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[BallCount]"
+                      dataType="i4"
+                      name="BallCount" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[IsSuperOver]"
+                      dataType="i4"
+                      name="IsSuperOver" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[WideRun]"
+                      dataType="i4"
+                      name="WideRun" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[ByeRun]"
+                      dataType="i4"
+                      name="ByeRun" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[LegByRun]"
+                      dataType="i4"
+                      name="LegByRun" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[NoBallRun]"
+                      dataType="i4"
+                      name="NoBallRun" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[PenaltyRun]"
+                      dataType="i4"
+                      name="PenaltyRun" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[BatsmanRun]"
+                      dataType="i4"
+                      name="BatsmanRun" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[ExtraRun]"
+                      dataType="i4"
+                      name="ExtraRun" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[TotalRun]"
+                      dataType="i4"
+                      name="TotalRun" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[InserDate]"
+                      dataType="dbTimeStamp"
+                      name="InserDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[ModifyDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifyDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[CreatTime]"
+                      dataType="dbTimeStamp"
+                      name="CreatTime" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[CompleteTime]"
+                      dataType="dbTimeStamp"
+                      name="CompleteTime" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[ProcessTimeHours]"
+                      dataType="r8"
+                      name="ProcessTimeHours" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[MatchDateKey]"
+                      dataType="i4"
+                      name="MatchDateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[BatsmanKey]"
+                      dataType="i4"
+                      name="BatsmanKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[NonStrickBatsmanKey]"
+                      dataType="i4"
+                      name="NonStrickBatsmanKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[BowlerKey]"
+                      dataType="i4"
+                      name="BowlerKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[BattingTeamKey]"
+                      dataType="i4"
+                      name="BattingTeamKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].ExternalColumns[BowlingTeamKey]"
+                      dataType="i4"
+                      name="BowlingTeamKey" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output].Columns[BallID]"
+                      dataType="i4"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output].Columns[BallID]"
+                      name="BallID" />
+                    <outputColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output].Columns[CompleteTime]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output].Columns[CompleteTime]"
+                      name="CompleteTime" />
+                    <outputColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output].Columns[ProcessTimeHours]"
+                      dataType="r8"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output].Columns[ProcessTimeHours]"
+                      name="ProcessTimeHours" />
+                    <outputColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output].Columns[CreatTime]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Error Output].Columns[CreatTime]"
+                      name="CreatTime" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract complete time\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Extract complete time\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract complete time\Merge Join.Inputs[Merge Join Left Input].Columns[BallID]"
+                      cachedDataType="i4"
+                      cachedName="BallID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output].Columns[BallID]" />
+                    <inputColumn
+                      refId="Package\Extract complete time\Merge Join.Inputs[Merge Join Left Input].Columns[CreatTime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatTime"
+                      lineageId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output].Columns[CreatTime]" />
+                    <inputColumn
+                      refId="Package\Extract complete time\Merge Join.Inputs[Merge Join Left Input].Columns[ProcessTimeHours]"
+                      cachedDataType="r8"
+                      cachedName="ProcessTimeHours"
+                      lineageId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output].Columns[ProcessTimeHours]" />
+                    <inputColumn
+                      refId="Package\Extract complete time\Merge Join.Inputs[Merge Join Left Input].Columns[CompleteTime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CompleteTime"
+                      lineageId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output].Columns[CompleteTime]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Extract complete time\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract complete time\Merge Join.Inputs[Merge Join Right Input].Columns[BallID]"
+                      cachedDataType="i4"
+                      cachedName="BallID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Extract complete time\sort BallID.Outputs[Sort Output].Columns[BallID]" />
+                    <inputColumn
+                      refId="Package\Extract complete time\Merge Join.Inputs[Merge Join Right Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Extract complete time\sort BallID.Outputs[Sort Output].Columns[accm_txn_complete_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[BallID]"
+                      dataType="i4"
+                      lineageId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[BallID]"
+                      name="BallID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract complete time\Merge Join.Inputs[Merge Join Left Input].Columns[BallID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[CreatTime]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[CreatTime]"
+                      name="CreatTime">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract complete time\Merge Join.Inputs[Merge Join Left Input].Columns[CreatTime]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[ProcessTimeHours]"
+                      dataType="r8"
+                      lineageId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[ProcessTimeHours]"
+                      name="ProcessTimeHours">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract complete time\Merge Join.Inputs[Merge Join Left Input].Columns[ProcessTimeHours]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[CompleteTime]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[CompleteTime]"
+                      name="CompleteTime">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract complete time\Merge Join.Inputs[Merge Join Left Input].Columns[CompleteTime]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Extract complete time\Merge Join.Inputs[Merge Join Right Input].Columns[accm_txn_complete_time]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract complete time\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update [IPL_MatchesD_DW].[dbo].[FactDelevery] set 
+[CompleteTime] = ?,  [ProcessTimeHours]= ?,
+[ModifyDate]= getdate()
+where [BallID]= ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract complete time\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-9EKHVJP\MSSQLSERVER_DWBI.IPL_MatchesD_DW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-9EKHVJP\MSSQLSERVER_DWBI.IPL_MatchesD_DW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input].Columns[BallID]"
+                      cachedDataType="i4"
+                      cachedName="BallID"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[BallID]" />
+                    <inputColumn
+                      refId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      externalMetadataColumnId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]" />
+                    <inputColumn
+                      refId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input].Columns[ProcessTimeHours]"
+                      cachedDataType="r8"
+                      cachedName="ProcessTimeHours"
+                      externalMetadataColumnId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output].Columns[ProcessTimeHours]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="dbTimeStamp"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="r8"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract complete time\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract complete time\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract complete time\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract complete time\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract complete time\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract complete time\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract complete time\sort Ball ID"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="sort Ball ID"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Extract complete time\sort Ball ID.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract complete time\sort Ball ID.Inputs[Sort Input].Columns[BallID]"
+                      cachedDataType="i4"
+                      cachedName="BallID"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[BallID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract complete time\sort Ball ID.Inputs[Sort Input].Columns[CreatTime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatTime"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[CreatTime]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract complete time\sort Ball ID.Inputs[Sort Input].Columns[CompleteTime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CompleteTime"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[CompleteTime]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract complete time\sort Ball ID.Inputs[Sort Input].Columns[ProcessTimeHours]"
+                      cachedDataType="r8"
+                      cachedName="ProcessTimeHours"
+                      lineageId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[ProcessTimeHours]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output].Columns[BallID]"
+                      dataType="i4"
+                      lineageId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output].Columns[BallID]"
+                      name="BallID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[BallID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output].Columns[CreatTime]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output].Columns[CreatTime]"
+                      name="CreatTime">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[CreatTime]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output].Columns[CompleteTime]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output].Columns[CompleteTime]"
+                      name="CompleteTime">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[CompleteTime]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output].Columns[ProcessTimeHours]"
+                      dataType="r8"
+                      lineageId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output].Columns[ProcessTimeHours]"
+                      name="ProcessTimeHours">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output].Columns[ProcessTimeHours]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract complete time\sort BallID"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="sort BallID"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Extract complete time\sort BallID.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract complete time\sort BallID.Inputs[Sort Input].Columns[BallID]"
+                      cachedDataType="i4"
+                      cachedName="BallID"
+                      lineageId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output].Columns[BallID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Extract complete time\sort BallID.Inputs[Sort Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract complete time\sort BallID.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract complete time\sort BallID.Outputs[Sort Output].Columns[BallID]"
+                      dataType="i4"
+                      lineageId="Package\Extract complete time\sort BallID.Outputs[Sort Output].Columns[BallID]"
+                      name="BallID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output].Columns[BallID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract complete time\sort BallID.Outputs[Sort Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract complete time\sort BallID.Outputs[Sort Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract complete time.Paths[Derived Column Output]"
+              endId="Package\Extract complete time\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\Extract complete time\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Extract complete time.Paths[Flat File Source Output]"
+              endId="Package\Extract complete time\sort BallID.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract complete time\Extrac Compleate time data.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Extract complete time.Paths[Merge Join Output]"
+              endId="Package\Extract complete time\Derived Column.Inputs[Derived Column Input]"
+              name="Merge Join Output"
+              startId="Package\Extract complete time\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Extract complete time.Paths[OLE DB Source Output]"
+              endId="Package\Extract complete time\sort Ball ID.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extract complete time.Paths[Sort Output]"
+              endId="Package\Extract complete time\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Extract complete time\sort BallID.Outputs[Sort Output]" />
+            <path
+              refId="Package\Extract complete time.Paths[Sort Output1]"
+              endId="Package\Extract complete time\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Extract complete time\sort Ball ID.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Extract complete time"
+          TopLeft="177,118" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extract complete time">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Extract complete time\Extrac Compleate time data"
+          TopLeft="74,25" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Extract complete time\OLE DB Command"
+          TopLeft="252,367" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Extract complete time\sort BallID"
+          TopLeft="151,132" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Extract complete time\sort Ball ID"
+          TopLeft="405,107" />
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Extract complete time\Merge Join"
+          TopLeft="274,203" />
+        <NodeLayout
+          Size="300,42"
+          Id="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW"
+          TopLeft="428,26" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Extract complete time\Derived Column"
+          TopLeft="255,282" />
+        <EdgeLayout
+          Id="Package\Extract complete time.Paths[Sort Output1]"
+          TopLeft="471.5,149">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-110.166666666667,54"
+              Start="0,0"
+              End="-110.166666666667,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.0148588410104" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.0148588410104"
+                    Point2="0,32.0148588410104"
+                    Point3="-4,32.0148588410104" />
+                  <mssgle:LineSegment
+                    End="-106.166666666667,32.0148588410104" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-106.166666666667,32.0148588410104"
+                    Point2="-110.166666666667,32.0148588410104"
+                    Point3="-110.166666666667,36.0148588410104" />
+                  <mssgle:LineSegment
+                    End="-110.166666666667,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract complete time.Paths[Sort Output]"
+          TopLeft="216,174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="103.666666666667,29"
+              Start="0,0"
+              End="103.666666666667,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.1931649331352" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.1931649331352"
+                    Point2="0,17.1931649331352"
+                    Point3="4,17.1931649331352" />
+                  <mssgle:LineSegment
+                    End="99.6666666666667,17.1931649331352" />
+                  <mssgle:CubicBezierSegment
+                    Point1="99.6666666666667,17.1931649331352"
+                    Point2="103.666666666667,17.1931649331352"
+                    Point3="103.666666666667,21.1931649331352" />
+                  <mssgle:LineSegment
+                    End="103.666666666667,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract complete time.Paths[OLE DB Source Output]"
+          TopLeft="578,68">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-106.5,39"
+              Start="0,0"
+              End="-106.5,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.5"
+                    Point2="0,19.5"
+                    Point3="-4,19.5" />
+                  <mssgle:LineSegment
+                    End="-102.5,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-102.5,19.5"
+                    Point2="-106.5,19.5"
+                    Point3="-106.5,23.5" />
+                  <mssgle:LineSegment
+                    End="-106.5,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract complete time.Paths[Merge Join Output]"
+          TopLeft="337.25,245">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract complete time.Paths[Flat File Source Output]"
+          TopLeft="181,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35,65"
+              Start="0,0"
+              End="35,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="4,32.5" />
+                  <mssgle:LineSegment
+                    End="31,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31,32.5"
+                    Point2="35,32.5"
+                    Point3="35,36.5" />
+                  <mssgle:LineSegment
+                    End="35,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extract complete time.Paths[Derived Column Output]"
+          TopLeft="336.25,324">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract complete time\Extract fact table from IPL_Match_Detail_DW">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
